@@ -48,7 +48,7 @@
 * Instalar.
 	
 	```
-	cd prueba/application
+	cd pruebaphp/application
 	composer install
 	```
 
