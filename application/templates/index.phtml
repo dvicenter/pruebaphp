@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Empleados</title>
+        <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <h1>Lista de empleados</h1>
+        <form method="post" action="email">
+            <input type="text" name="email" placeholder="Buscar por email">
+            <input type="submit" name="buscar" value="buscar">
+        </form>
+        <br>
+        <table border="1">
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Posicion</th>
+                <th>Salario</th>
+                <th>Detalle</th>
+            </tr>
+            <?php foreach ($employees as $row): ?>
+                <tr>
+                    <td><?php echo $row['name']; ?></td>
+                    <td><?php echo $row['email']; ?></td>
+                    <td><?php echo $row['position']; ?></td>
+                    <td><?php echo $row['salary']; ?></td>
+                    <td><a href="<?php echo $row['id']; ?>"> ver</a></td>
+                </tr>
+            <?php endforeach ?>
+        </table>
+        <br>
+        <a href="<?php echo '../public' ?>">Ver Listado</a>
+    </body>
+</html>

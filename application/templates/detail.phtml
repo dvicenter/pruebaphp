@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Empleado <?php echo $employee['name']; ?></title>
+        <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+    	<h1>Empleado <?php echo $employee['name']; ?></h1>
+        <table border="1">
+            <tr>
+                <th>Nombre</th>
+                <td><?php echo $employee['name']; ?></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><?php echo $employee['email']; ?></td>
+            </tr>
+            <tr>
+                <th>Telefono</th>
+                <td><?php echo $employee['phone']; ?></td>
+            </tr>
+            <tr>
+                <th>Direccion</th>
+                <td><?php echo $employee['address']; ?></td>
+            </tr>
+            <tr>
+                <th>Posicion</th>
+                <td><?php echo $employee['position']; ?></td>
+            </tr>
+            <tr>
+                <th>Salario</th>
+                <td><?php echo $employee['salary']; ?></td>
+            </tr>
+            <tr>
+                <th>Skylls</th>
+                <td>
+                	<ul>
+                		<?php foreach ($employee['skills'] as $row): ?>
+                			<li><?php echo $row['skill']; ?></li>
+                		<?php endforeach ?>
+                	</ul>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <a href="<?php echo '../public' ?>">Ver Listado</a>
+    </body>
+</html>
+
